@@ -1,0 +1,40 @@
+@import 'typography/fonts';
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$brand-font-family: sans-serif;
+$font-family-sans-serif: Euphorigenic,'Hand Typewriter', 'Enjoy Writing', Avdira, Pompiere, Wanda, Hadley, 'Hadley Alt', 'Glass Antiqua', 'Love Ya Like A Sister', Raleway, sans-serif;
+
+// stylelint-enable value-keyword-case
+$brand-font-family-code: 'Courier New';
+$brand-code-font: 'Courier New';
+
+$body: $white;
+$text: $black;
+
+$body-font: 'Raleway';
+$site-title: 'Hand Typewriter';
+$author-font: 'Euphorigenic';
+$page-title: 'Enjoy Writing';
+$entry-font: 'Pompiere';
+$nav-font: 'Wanda';
+$btn-font: 'Hadley Alt';
+$menu-font: 'Hadley';
+$quote-font: 'Glass Antiqua';
+$footer-font: 'Love Ya Like A Sister';
+
+$brand-fonts: (
+body:         $body-font,
+author:       $author-font,
+page:         $page-title,
+entry:        $entry-font,
+nav:          $nav-font,
+btn:          $btn-font,
+menu:         $menu-font,
+quote:        $quote-font,
+footer:       $footer-font,
+site:         $site-title
+);

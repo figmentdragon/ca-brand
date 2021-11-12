@@ -1,0 +1,177 @@
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text$font-size-root: 1rem;
+$font-size-base: 1.05rem;
+$base-size: 1.15;// Assumes the browser default, typically `16px`
+
+$xs: .75;
+$sm: .875;
+$md: 1.05;
+$lg: 1.25;
+$xl: 1.75;
+$xxl: 2.25;
+
+$font-sm: calc($font-size-base * .875);
+$font-md: $font-size-base;
+$font-lg: calc($font-size-base * 1.75);
+$font-xl: calc($font-size-base * 2.25);
+$font-xxl: calc($font-size-base * 2.75);
+
+$site-title: $font-xxl; /* 34pt */
+$page-title: $font-xl; /* 28pt */
+$post-title: $font-lg; /* 22pt */
+$lead: calc($font-md * $sm); /* 11pt */
+$description: calc($font-md * $lg);
+$body: calc($font-md * $md); /* 14.5pt */
+$meta: $font-sm;
+$author: calc($font-md * $md);
+
+$lightest: 100;
+$lighter: 200;
+$light: 300;
+$lite: 400;
+$normal: 500;
+$normaler: 600;
+$bold: 700;
+$bolder: 800;
+$boldest: 900;
+
+$font-weights: (
+100: $lightest,
+200: $lighter,
+300: $light,
+400: $normal,
+500: $normaler,
+600: $bold,
+700: $bolder,
+900: $boldest
+);
+
+$font-weight-lightest: $lightest;
+$font-weight-lighter: $lighter;
+$font-weight-light: $light;
+$font-weight-lite: $lite;
+$font-weight-normal: $normal;
+$font-weight-normaler: $normaler;
+$font-weight-bold: $bold;
+$font-weight-bolder: $bolder;
+$font-weight-boldest: $boldest;
+
+$site-title-font-weight: $bolder;
+$display-font-weight: $bold;
+$page-title-font-weight: $bold;
+$post-title-font-weight: $normaler;
+$body-font-weight: $lite;
+$meta-font-weight: $light;
+$caption-font-weight: $lighter;
+
+$letter-spacing-xs: calc(.75 * $spacer-sm)rem;
+$letter-spacing-sm: calc(.875 * $spacer-sm)rem;
+$letter-spacing-md: calc(1.05 * $spacer-sm)rem;
+$letter-spacing-lg: calc(1.25 * $spacer-sm)rem;
+$letter-spacing-xl: calc(1.50 * $spacer-sm)rem;
+$letter-spacing-xxl: calc(3 * $spacer-sm)rem;
+
+$line-height-base: 1.15;
+$line-height-xs: calc(.75 * $line-height-base)rem;
+$line-height-sm: calc(.875 * $line-height-base)rem;
+$line-height-md: calc(1.05 * $line-height-base)rem;
+$line-height-lg: calc(1.25 * $line-height-base)rem;
+$line-height-xl: calc(1.50 * $line-height-base)rem;
+$line-height-xxl: calc(3 * $line-height-base)rem;
+
+$line-height-page-title: $line-height-xl;
+$line-height-post-title: $line-height-lg;
+$line-height-description: $line-height-md;
+$line-height-body: $line-height-base;
+$line-height-meta: $line-height-sm;
+$line-height-caption: $line-height-xs;
+
+$heading-font-size-base: 1.25vh;
+
+$h1-font-size: $heading-font-size-base * 5;
+$h2-font-size: $heading-font-size-base * 4.5;
+$h3-font-size: $heading-font-size-base * 4;
+$h4-font-size: $heading-font-size-base * 3.5;
+$h5-font-size: $heading-font-size-base * 3;
+$h6-font-size: $heading-font-size-base * 2.5;
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin-bottom: $spacer-md * .5;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+$headings-color: null;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$entry-header-font-size: $font-lg;
+
+$display-weight: 300;
+$display-line-height: $headings-line-height;
+// scss-docs-end display-headings
+
+// scss-docs-start type-variables
+$lead-font-size: $base-size * 1.25;
+$lead-font-weight: 300;
+
+$small-font-size: sm;
+
+$sub-sup-font-size: xs;
+
+$muted: $silver;
+
+$initialism-font-size: sm;
+
+$blockquote-margin-y: $spacer;
+$blockquote-font-size: $font-size-base * 2.25;
+$blockquote-footer-color: $gray-300;
+$blockquote-footer-font-size: md;
+
+$hr-margin-y:                 $padding-y-sm;
+$hr-color: inherit;
+$hr-bg-color:                 currentColor;
+$hr-border-width:             0;
+$hr-height:                   1px;
+$hr-opacity: .25;
+
+$legend-margin-bottom: .5rem;
+$legend-font-size: xl;
+$legend-font-weight: null;
+
+$mark-padding: .2rem;
+
+$dt-font-weight: $font-weight-bold;
+
+$nested-kbd-font-weight: $font-weight-bold;
+
+$list-inline-padding: .5rem;
+
+$mark-bg: $gray-300;
+
+$quotation: obalique;
+$citation: italic;
+$link: underline;
+// scss-docs-end type-variables
+
+// Code
+$code-font-size: $small-font-size;
+$code-color: $pink;
+
+$kbd-padding-y: .2rem;
+$kbd-padding-x: .4rem;
+$kbd-font-size: $code-font-size;
+$kbd-color: $white;
+$kbd-bg: $gray-900;
+
+$pre-color: null;
