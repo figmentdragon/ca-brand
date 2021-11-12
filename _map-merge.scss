@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+$utilities-colors: map.merge($utilities-colors, $theme-color);
+$framework-colors: map.merge($colors, $utilities-colors);
+
+$utilities-text: map.merge($utilities-text-colors, $utilities-text);
+$framework-text: map.merge($utilities-text, $framework-colors);
+
+
+$utilities-support: map.merge($utilities-bg-colors, $utilities-border);
+$framework-utilities: map.merge($utilities-colors, $utilities-support);
+
+//$framework-text-rgba: map.merge($framework-text, $framework-rgba, "text");
+//$framework-bg-rgba: map-loop($utilities-bg, rgba-css-var, "bg");
