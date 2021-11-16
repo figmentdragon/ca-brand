@@ -1,21 +1,21 @@
 $branding-color-primary: #0abab5;
-$branding-color-secondary: #a8a9ad;
-$branding-color-accent: #ffe41e;
+$branding-color-secondary: #ffe41e;
+$branding-color-accent: #a8a9ad;
 
 $branding-color-rgba-primary: rgba(202,255,255);
-$branding-color-rgba-secondary: rgba(255,228,30);
-$branding-color-rgba-accent: rgba(168,169,173);
+$branding-color-rgba-secondary: rgba(168,169,173);
+$branding-color-rgba-accent: rgba(255,228,30);
 
 $branding-color: (
 primary:  #0abab5,
-secondary: #a8a9ad,
-accent: #ffe41e
+secondary: #ffe41e,
+accent: #a8a9ad
 );
 
 $branding-color-rgba: (
 primary-rgba: rgba(202,255,255),
-secondary-rgba: rgba(255,228,30),
-accent-rgba: rgba(168,169,173)
+secondary-rgba: rgba(168,169,173),
+accent-rgba: rgba(255,228,30)
 );
 
 $branding-color-secondary-100: tint-color($branding-color-secondary, 80%);
