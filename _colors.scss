@@ -1,0 +1,63 @@
+$branding-color-primary: #0abab5;
+$branding-color-secondary: #a8a9ad;
+$branding-color-accent: #ffe41e;
+
+$branding-color-rgba-primary: rgba(202,255,255);
+$branding-color-rgba-secondary: rgba(255,228,30);
+$branding-color-rgba-accent: rgba(168,169,173);
+
+$branding-color: (
+primary:  #0abab5,
+secondary: #a8a9ad,
+accent: #ffe41e
+);
+
+$branding-color-rgba: (
+primary-rgba: rgba(202,255,255),
+secondary-rgba: rgba(255,228,30),
+accent-rgba: rgba(168,169,173)
+);
+
+$branding-color-secondary-100: tint-color($branding-color-secondary, 80%);
+$branding-color-secondary-200: tint-color($branding-color-secondary, 60%);
+$branding-color-secondary-300: tint-color($branding-color-secondary, 40%);
+$branding-color-secondary-400: tint-color($branding-color-secondary, 20%);
+$branding-color-secondary-500: $branding-color-secondary;
+$branding-color-secondary-600: shade-color($branding-color-secondary, 20%);
+$branding-color-secondary-700: shade-color($branding-color-secondary, 40%);
+$branding-color-secondary-800: shade-color($branding-color-secondary, 60%);
+$branding-color-secondary-900: shade-color($branding-color-secondary, 80%);
+
+$branding-color-primary-100: tint-color($branding-color-primary, 80%);
+$branding-color-primary-200: tint-color($branding-color-primary, 60%);
+$branding-color-primary-300: tint-color($branding-color-primary, 40%);
+$branding-color-primary-400: tint-color($branding-color-primary, 20%);
+$branding-color-primary-500: $branding-color-primary;
+$branding-color-primary-600: shade-color($branding-color-primary, 20%);
+$branding-color-primary-700: shade-color($branding-color-primary, 40%);
+$branding-color-primary-800: shade-color($branding-color-primary, 60%);
+$branding-color-primary-900: shade-color($branding-color-primary, 80%);
+
+$branding-color-secondarys: (
+  'branding-color-secondary-100': $branding-color-secondary-100,
+  'branding-color-secondary-200': $branding-color-secondary-200,
+  'branding-color-secondary-300': $branding-color-secondary-300,
+  'branding-color-secondary-400': $branding-color-secondary-400,
+  'branding-color-secondary-500': $branding-color-secondary-500,
+  'branding-color-secondary-600': $branding-color-secondary-600,
+  'branding-color-secondary-700': $branding-color-secondary-700,
+  'branding-color-secondary-800': $branding-color-secondary-800,
+  'branding-color-secondary-900': $branding-color-secondary-900
+);
+
+$branding-color-primarys: (
+  'branding-color-primary-100': $branding-color-primary-100,
+  'branding-color-primary-200': $branding-color-primary-200,
+  'branding-color-primary-300': $branding-color-primary-300,
+  'branding-color-primary-400': $branding-color-primary-400,
+  'branding-color-primary-500': $branding-color-primary-500,
+  'branding-color-primary-600': $branding-color-primary-600,
+  'branding-color-primary-700': $branding-color-primary-700,
+  'branding-color-primary-800': $branding-color-primary-800,
+  'branding-color-primary-900': $branding-color-primary-900
+);
