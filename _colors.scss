@@ -1,63 +1,76 @@
-$branding-color-primary: #0abab5;
-$branding-color-secondary: #ffe41e;
-$branding-color-accent: #a8a9ad;
+$cjmt-white: #e4edf4;
+$cjmt-gray-100: #c0c0c0;
+$cjmt-gray-200: #9a9a9a;
+$cjmt-gray-300: #7b7b7b;
+$cjmt-gray-400: #626262;
+$cjmt-gray-500: #4e4e4e;
+$cjmt-gray-600: #3e3e3e;
+$cjmt-gray-700: #323232;
+$cjmt-gray-800: #282828;
+$cjmt-gray-900: #1a1a1a;
+$cjmt-black: #000100;
 
-$branding-color-rgba-primary: rgba(202,255,255);
-$branding-color-rgba-secondary: rgba(168,169,173);
-$branding-color-rgba-accent: rgba(255,228,30);
+$cjmt-grays: (
+  100: $cjmt-gray-100,
+  200: $cjmt-gray-200,
+  300: $cjmt-gray-300,
+  400: $cjmt-gray-400,
+  500: $cjmt-gray-500,
+  600: $cjmt-gray-600,
+  700: $cjmt-gray-700,
+  800: $cjmt-gray-800,
+  900: $cjmt-gray-900
+);
 
-$branding-color: (
+$cjmt-blue: #4169e1;
+$cjmt-indigo: #60f;
+$cjmt-purple: #510bda;
+$cjmt-pink: #c39;
+$cjmt-red: #dc3545;
+$cjmt-orange: #f96;
+$cjmt-yellow: #ffe41e;
+$cjmt-green: #0bda51;
+$cjmt-teal: #caffff;
+$cjmt-cyan: #0abab5;
+$cjmt-silver: #a8a9ad;
+$cjmt-brown: #623412;
+$cjmt-gray: $cjmt-gray-600;
+$cjmt-dark: $cjmt-gray-900;
+$cjmt-light: $gray-100;
+
+$cjmt-color-primary: #0abab5;
+$cjmt-color-secondary: #ffe41e;
+$cjmt-color-accent: #a8a9ad;
+
+$cjmt-color: (
 primary:  #0abab5,
 secondary: #ffe41e,
 accent: #a8a9ad
 );
 
-$branding-color-rgba: (
-primary-rgba: rgba(202,255,255),
-secondary-rgba: rgba(168,169,173),
-accent-rgba: rgba(255,228,30)
+$cjmt-color-primary-rgba: rgba(0,204,204);
+$cjmt-color-secondary-rgba: rgba(255,228,30);
+$cjmt-color-accent-rgba: rgba(168,169,173);
+
+$gradient-cjmt: linear-gradient(-310deg, rgba($cjmt-color-primary-rgba, .55) 35%, rgba($cjmt-color-secondary-rgba, .45) 45%, rgba($cjmt-color-accent-rgba, .35) 85%,
+transparent);
+
+$cjmt-color-rgba: (
+primary-rgba: rgba(10, 186, 181),
+secondary-rgba: rgba(255,228,30),
+accent-rgba: rgba(168,169,173)
 );
 
-$branding-color-secondary-100: tint-color($branding-color-secondary, 80%);
-$branding-color-secondary-200: tint-color($branding-color-secondary, 60%);
-$branding-color-secondary-300: tint-color($branding-color-secondary, 40%);
-$branding-color-secondary-400: tint-color($branding-color-secondary, 20%);
-$branding-color-secondary-500: $branding-color-secondary;
-$branding-color-secondary-600: shade-color($branding-color-secondary, 20%);
-$branding-color-secondary-700: shade-color($branding-color-secondary, 40%);
-$branding-color-secondary-800: shade-color($branding-color-secondary, 60%);
-$branding-color-secondary-900: shade-color($branding-color-secondary, 80%);
+$cjmt-gray-100-rgba: rgba(192,192,192);
+$cjmt-gray-200-rgba: rgba(154 154 154);
+$cjmt-gray-300-rgba: rgba(123, 123, 123);
+$cjmt-gray-400-rgba: rgba(98 98 98);
+$cjmt-gray-500-rgba: rgba(78,78,78);
+$cjmt-gray-600-rgba: rgba(62,62,62);
+$cjmt-gray-700-rgba: rgba(50,50,50);
+$cjmt-gray-800-rgba: rgba(40,40,40);
+$cjmt-gray-900-rgba: rgba(26,26,26);
 
-$branding-color-primary-100: tint-color($branding-color-primary, 80%);
-$branding-color-primary-200: tint-color($branding-color-primary, 60%);
-$branding-color-primary-300: tint-color($branding-color-primary, 40%);
-$branding-color-primary-400: tint-color($branding-color-primary, 20%);
-$branding-color-primary-500: $branding-color-primary;
-$branding-color-primary-600: shade-color($branding-color-primary, 20%);
-$branding-color-primary-700: shade-color($branding-color-primary, 40%);
-$branding-color-primary-800: shade-color($branding-color-primary, 60%);
-$branding-color-primary-900: shade-color($branding-color-primary, 80%);
 
-$branding-color-secondarys: (
-  'branding-color-secondary-100': $branding-color-secondary-100,
-  'branding-color-secondary-200': $branding-color-secondary-200,
-  'branding-color-secondary-300': $branding-color-secondary-300,
-  'branding-color-secondary-400': $branding-color-secondary-400,
-  'branding-color-secondary-500': $branding-color-secondary-500,
-  'branding-color-secondary-600': $branding-color-secondary-600,
-  'branding-color-secondary-700': $branding-color-secondary-700,
-  'branding-color-secondary-800': $branding-color-secondary-800,
-  'branding-color-secondary-900': $branding-color-secondary-900
-);
-
-$branding-color-primarys: (
-  'branding-color-primary-100': $branding-color-primary-100,
-  'branding-color-primary-200': $branding-color-primary-200,
-  'branding-color-primary-300': $branding-color-primary-300,
-  'branding-color-primary-400': $branding-color-primary-400,
-  'branding-color-primary-500': $branding-color-primary-500,
-  'branding-color-primary-600': $branding-color-primary-600,
-  'branding-color-primary-700': $branding-color-primary-700,
-  'branding-color-primary-800': $branding-color-primary-800,
-  'branding-color-primary-900': $branding-color-primary-900
-);
+$cjmt-shadow-rgba: $cjmt-gray-700-rgba;
+$cjmt-shadow: 8px 4px 1px rgba($cjmt-gray-700-rgba, .95);
