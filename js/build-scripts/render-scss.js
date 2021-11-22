@@ -7,7 +7,7 @@ const postcss = require('postcss')
 const sass = require('sass');
 const sh = require('shelljs');
 
-const stylesPath = '../src/style.scss';
+const stylesPath = 'cjmt.scss';
 const destPath = upath.resolve(upath.dirname(__filename), './src/build/style.css');
 
 module.exports = function renderSCSS() {
