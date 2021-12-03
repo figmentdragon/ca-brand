@@ -1,0 +1,29 @@
+@import 'cjmt-colors';
+@import 'cjmt-rgb';
+@import 'cjmt-variables';
+@import 'fonts/cjmt-font-family';
+@import 'cjmt-typography';
+@import 'cjmt-style';
+
+
+$primary:         $cjmt-primary;
+$secondary:       $cjmt-secondary;
+$accent:          $cjmt-accent;
+
+$active:          $primary;
+$active-bg:       $secondary;
+$active-border:   $accent;
+
+$active-component-color:    $active;
+$active-component-bg:       $active-bg;
+$active-component-border:   $active-border;
+
+$disabled-color:        $disabled;
+$disabled-bg-color:     $disabled-bg;
+$disabled-border-color: $disabled-border;
+
+$nav-active-color:          $nav-active;
+$tabs-border-color:         $tabs-border;
+$tabs-active-color:         $tabs-active;
+$tabs-active-bg-color:      $tabs-active-bg;
+$tabs-active-border-color:  $tabs-active-border;

@@ -1,0 +1,44 @@
+$cjmt-gradient: linear-gradient(-270deg, rgba($cjmt-primary-rgb, .5) 40%, rgba($cjmt-secondary-rgb, .35), 30%, rgba($cjmt-accent-rgb, .65) 20%, transparent);
+
+$cjmt-gradient-white: linear-gradient(-220deg, rgba($cjmt-gray-500-rgb, .35) 20%, rgba($cjmt-primary-rgb, .4) 30%, rgba($cjmt-gray-700-rgb, .4) 40%, rgba($cjmt-gray-600-rgb, .5) 50%, transparent, rgba($cjmt-gray-400-rgb, .55) 60%, rgba($cjmt-gray-200-rgb, .6) 65%, rgba($cjmt-gray-500-rgb, .5) 75%);
+
+
+
+.site-title
+{
+    font-family: $cjmt-site-font-family;
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 1.75rem;
+
+    position: absolute;
+    z-index: $z-index-site-title;
+
+    color: $cjmt-primary;
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    -webkit-text-stroke-color: $cjmt-gray-800;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: -1px 1px 0 $cjmt-accent, 1px 1px 0 $cjmt-accent, 1px -1px 0 $cjmt-secondary, -1px -1px 0 $cjmt-accent, -2px 2px 0 $cjmt-accent, 2px 2px 0 $cjmt-secondary, 2px -2px 0 $cjmt-secondary;
+}
+
+
+.page-title
+{
+    font-family: $cjmt-page-font-family;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: $line-height-base;
+
+    float: left;
+
+    width: auto;
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+    color: $cjmt-primary;
+    text-shadow: $cjmt-shadow;
+
+    -webkit-text-stroke-color: $cjmt-secondary;
+    -webkit-text-stroke-width: 1px;
+}

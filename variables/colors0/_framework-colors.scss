@@ -1,0 +1,19 @@
+$primary:   $cyan !default;
+$secondary: $yellow !default;
+$accent:    $silver !default;
+
+$colors:(
+primary:  $primary,
+secondary: $secondary,
+accent: $accent
+) !default;
+
+$primary-rgb: rgb(202,255,255) !default;
+$secondary-rgb: rgb(255,228,30) !default;
+$accent-rgb: rgb(168,169,173) !default;
+
+$colors-rgb: (
+primary-rgb: $primary-rgb,
+secondary-rgb: $secondary-rgb,
+accent-rgb: $accent-rgb
+) !default;

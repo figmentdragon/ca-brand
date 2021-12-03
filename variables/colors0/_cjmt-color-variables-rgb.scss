@@ -1,0 +1,39 @@
+$cjmt-gray-100-rgb: rgb(192,192,192);
+$cjmt-gray-200-rgb: rgb(154,154,154);
+$cjmt-gray-300-rgb: rgb(123,123,123);
+$cjmt-gray-400-rgb: rgb(98 98 98);
+$cjmt-gray-500-rgb: rgb(78,78,78);
+$cjmt-gray-600-rgb: rgb(62,62,62);
+$cjmt-gray-700-rgb: rgb(50,50,50);
+$cjmt-gray-800-rgb: rgb(40,40,40);
+$cjmt-gray-900-rgb: rgb(26,26,26);
+
+$cjmt-primary-rgb:    rgb(0,204,204);
+$cjmt-secondary-rgb:  rgb(255,228,30);
+$cjmt-accent-rgb:     rgb(168,169,173);
+$success-rgb:         rgb(11,218,81);
+$warning-rgb:         rgb(255,153,102);
+$danger-rgb:          rgb(186,10,15);
+$info-rgb:            rgb(65,105,225);
+
+$cjmt-text-rgb:       rgb(192,192,192);
+$cjmt-bg-rgb:         rgb(40,40,40);
+$cjmt-text-muted-rgb: rgb(78,78,78);
+cjmt-text-rgb:        $cjmt-text-rgb,
+cjmt-bg-rgb:          $cjmt-bg-rgb,
+cjmt-text-muted-rgb:  $cjmt-text-muted-rgb
+
+/* Utilities Text Variables */
+$text-muted-rgb:        rgb(98,98,98);
+$text-rgb:              rgb(0,1,0);
+$body-rgb:              rgb(228,237,244);
+$caption-rgb:           rgb(62,62,62);
+$caption-border-rgb:    rgb(26,26,26);
+$light-rgb:             rgb(192,192,192);
+$dark-rgb:              rgb(26,26,26);
+$input-rgb:             rgb(78,78,78);
+$input-bg-rgb:          rgb(192,192,192);
+$input-border-rgb:      rgb(26,26,26);
+$input-focus-rgb:       rgb(40,40,40);
+$input-focus-bg-rgb:     rgb(228,237,244);
+$input-focus-border-rgb: rgb(26,26,26);
