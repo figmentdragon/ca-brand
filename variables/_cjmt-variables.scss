@@ -2,3 +2,27 @@
 @import 'colors/cjmt-brand-rgba';
 @import 'colors/cjmt-brand-utilities-color';
 @import 'colors/cjmt-brand-color-maps';
+
+$sm: .875;
+$lg: 1.25;
+
+$grid-gutter-width: .25rem;
+$offset: $grid-gutter-width * 2;
+$offset-x: $offset;
+$offset-y: $grid-gutter-width * .5;
+
+$border-width: 2px;
+
+$z-index-site-title: 525;
+
+$sm: .875;
+$lg: 1.25;
+
+$grid-gutter-width: .25rem;
+$offset: $grid-gutter-width * 2;
+$offset-x: $offset;
+$offset-y: $grid-gutter-width * .5;
+
+$border-width: 2px;
+
+$z-index-site-title: 525;
