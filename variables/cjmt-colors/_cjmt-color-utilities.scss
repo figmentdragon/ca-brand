@@ -20,22 +20,22 @@ $input-focus:         $cjmt-gray-800;
 $input-focus-bg:      $cjmt-white;
 $input-focus-border:  $cjmt-gray-100;
 
-$cjmt-shadow-color:  $cjmt-gray-800;
-$cjmt-shadow: .5rem .75rem .25rem $cjmt-shadow-color;
+$shadow-color:        $cjmt-gray-800;
+$hadow:               .5rem .75rem .25rem $cjmt-shadow-color;
 
 
 /* Link Utilities */
-$active-component-color:    $cjmt-primary;
-$active-component-bg:       $cjmt-secondary;
-$active-component-border:   $cjmt-accent;
+$active-component-color:    $cjmt-primary-color;
+$active-component-bg:       $cjmt-secondary-color;
+$active-component-border:   $cjmt-accent-color;
 
-$link-shade-percentage: 15%;
-$link-active-shade-percentage: 40%;
-$link-active-hover-decoration: bold, underline;
+$link-shade-percentage:         15%;
+$link-active-shade-percentage:  40%;
+$link-active-hover-decoration:  bold, underline;
 
-$disabled:            $cjmt-dark-vanilla;
-$disabled-bg:         $cjmt-white-chocolate;
-$disabled-border:     $cjmt-dark-vanilla;
+$disabled:                      $cjmt-dark-vanilla;
+$disabled-bg:                   $cjmt-white-chocolate;
+$disabled-border:               $cjmt-dark-vanilla;
 
 /* Nav Utilities */
 $nav-active:                      $cjmt-chocolate;
@@ -47,7 +47,7 @@ $tabs-active-bg:                $cjmt-camel;
 $tabs-active-border:            $cjmt-chocolate;
 
 
-$border:      $cjmt-chocolate;
+$cjmt-border:      $cjmt-chocolate;
 
 $divider:     $border;
 $separator:   $border;
@@ -55,8 +55,6 @@ $visited:     $cjmt-purple;
 $table:       $cjmt-teal;
 $widget:      $cjmt-silver;
 
-$valid:       #0bda51;
-$invalid:     #dc3545;
 
 
 

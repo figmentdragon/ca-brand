@@ -4,7 +4,7 @@ $cjmt-accent:    $silver;
 
 $primary-color:   $cjmt-primary;
 $secondary-color: $cjmt-secondary;
-$accent-color-color:    $cjmt-accent;
+$accent-color:    $cjmt-accent;
 
 $success:     $green;
 $warning:     $orange;
@@ -16,7 +16,7 @@ $dark:        $cjmt-gray-900;
 $theme-color: (
 primary-color:   $primary-color,
 secondary-color: $secondary-color,
-accent-color:    $accent-color-color,
+accent-color:    $accent-color,
 success:         $success,
 warning:         $warning,
 danger:          $danger,

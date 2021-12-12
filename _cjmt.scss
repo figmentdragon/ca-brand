@@ -15,9 +15,9 @@ Module Stylesheet: CJMT Branding
 /*********************
   Gradient
 *********************/
-$cjmt-color-gradient: linear-gradient(-270deg, rgba($cjmt-color-primary-rgb, .5) 40%, rgba($cjmt-color-secondary-rgb, .35), 30%, rgba($cjmt-color-accent-rgb, .65) 20%, transparent);
+$cjmt-brand-gradient: linear-gradient(-270deg, rgba($cjmt-primary-color-rgb, .5) 40%, rgba($cjmt-secondary-color-rgb, .35), 30%, rgba($cjmt-accent-color-rgb, .65) 20%, transparent);
 
-$cjmt-color-gradient-white: linear-gradient(-220deg, rgba($cjmt-color-gray-500-rgb, .35) 20%, rgba($cjmt-color-primary-rgb, .4) 30%, rgba($cjmt-color-gray-700-rgb, .4) 40%, rgba($cjmt-color-gray-600-rgb, .5) 50%, transparent, rgba($cjmt-color-gray-400-rgb, .55) 60%, rgba($cjmt-color-gray-200-rgb, .6) 65%, rgba($cjmt-color-gray-500-rgb, .5) 75%);
+$cjmt-color-gradient-white: linear-gradient(-220deg, rgba($cjmt-color-gray-500-rgb, .35) 20%, rgba($cjmt-primary-color-rgb, .4) 30%, rgba($cjmt-color-gray-700-rgb, .4) 40%, rgba($cjmt-color-gray-600-rgb, .5) 50%, transparent, rgba($cjmt-color-gray-400-rgb, .55) 60%, rgba($cjmt-color-gray-200-rgb, .6) 65%, rgba($cjmt-color-gray-500-rgb, .5) 75%);
 
 /*********************
  Typography
@@ -32,13 +32,13 @@ $cjmt-color-gradient-white: linear-gradient(-220deg, rgba($cjmt-color-gray-500-r
     position: absolute;
     z-index: $z-index-site-title;
 
-    color: $cjmt-color-primary;
+    color: $cjmt-primary-color;
 
     writing-mode: vertical-lr;
     text-orientation: upright;
     -webkit-text-stroke-color: $cjmt-gray-800;
     -webkit-text-stroke-width: 1px;
-    text-shadow: -1px 1px 0 $cjmt-color-accent, 1px 1px 0 $cjmt-color-accent, 1px -1px 0 $cjmt-color-secondary, -1px -1px 0 $cjmt-color-accent, -2px 2px 0 $cjmt-color-accent, 2px 2px 0 $cjmt-color-secondary, 2px -2px 0 $cjmt-color-secondary;
+    text-shadow: -1px 1px 0 $cjmt-accent-color, 1px 1px 0 $cjmt-accent-color, 1px -1px 0 $cjmt-secondary-color, -1px -1px 0 $cjmt-accent-color, -2px 2px 0 $cjmt-accent-color, 2px 2px 0 $cjmt-secondary-color, 2px -2px 0 $cjmt-secondary-color;
 }
 
 
@@ -54,25 +54,25 @@ $cjmt-color-gradient-white: linear-gradient(-220deg, rgba($cjmt-color-gray-500-r
     width: auto;
     margin-top: 3.5rem;
     margin-left: 5rem;
-    color: $cjmt-color-primary;
+    color: $cjmt-primary-color;
     text-shadow: $cjmt-color-shadow;
 
-    -webkit-text-stroke-color: $cjmt-color-secondary;
+    -webkit-text-stroke-color: $cjmt-secondary-color;
     -webkit-text-stroke-width: 1px;
 }
 
 /******************************************************************/
 
-$color-primary:         $cjmt-primary;
-$color-secondary:       $cjmt-secondary;
-$color-accent:          $cjmt-accent;
+$primary-color:         $cjmt-primary;
+$secondary-color:       $cjmt-secondary;
+$accent-color:          $cjmt-accent;
 
-$active:                $color-primary;
-$active-bg:             $color-secondary;
-$active-border:         $color-accent;
+$active:                $primary-color;
+$active-bg:             $secondary-color;
+$active-border:         $accent-color;
 
-$active-component-color:    $color-primary;
-$active-component-bg:       $color-secondary;
+$active-component-color:    $primary-color;
+$active-component-bg:       $secondary-color;
 $active-component-border:   $active-border;
 
 $disabled-color:            $disabled;

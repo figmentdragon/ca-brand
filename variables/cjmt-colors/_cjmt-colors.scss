@@ -1,5 +1,5 @@
 /* scss-docs-start cjmt-gray-color-variables */
-$cjmt-white: #e4edf4;
+$cjmt-white:    #e4edf4;
 $cjmt-gray-100: #c0c0c0;
 $cjmt-gray-200: #9a9a9a;
 $cjmt-gray-300: #7b7b7b;
@@ -9,7 +9,7 @@ $cjmt-gray-600: #3e3e3e;
 $cjmt-gray-700: #323232;
 $cjmt-gray-800: #282828;
 $cjmt-gray-900: #1a1a1a;
-$cjmt-black: #000100;
+$cjmt-black:    #000100;
 /* scss-docs-end cjmt-gray-color-variables */
 
 /* scss-docs-start color-variables */
@@ -23,9 +23,12 @@ $cjmt-yellow:             #ffe41e;
 $cjmt-green:              #82ded1;
 $cjmt-teal:               #b5ede4;
 $cjmt-cyan:               #0abab5;
-$cjmt-silver:             #a8a9ad;
-$cjmt-chocolate:          #623412;
 $cjmt-gray:               $cjmt-gray-600;
+
+$cjmt-silver:             #a8a9ad;
+
+/* Tabs */
+$cjmt-chocolate:          #623412;
 $cjmt-camel:              #c19a6b;
 $cjmt-saltpan:            #ffffcc;
 $cjmt-white-chocolate:    #ede6d6;
@@ -33,6 +36,7 @@ $cjmt-dark-vanilla:       #d1bea8;
 $cjmt-ghost-white:        #fbfbfd;
 /* scss-docs-end color-variables */
 
+/* Theme BG Colors */
 $cjmt-light-cyan:         #CDFFFF; /* Light Green */
 $cjmt-neon-blue:          #555AFF; /* light blue */
 $cjmt-salomie:            #FFD080; /* light orange */
