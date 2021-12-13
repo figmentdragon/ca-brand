@@ -7,6 +7,7 @@ $cjmt-gray-600-rgb: rgb(62,62,62);
 $cjmt-gray-700-rgb: rgb(50,50,50);
 $cjmt-gray-800-rgb: rgb(40,40,40);
 $cjmt-gray-900-rgb: rgb(26,26,26);
+// scss-docs-end gray-color-variables
 
 $cjmt-teal-rgb:             rgb(202,255,255);
 $cjmt-yellow-rgb:           rgb(255,228,30);
@@ -30,7 +31,33 @@ $cjmt-dark-vanilla-rgb:     rgb(209,190,168);
 $cjmt-white-chocolate-rgb:  rgb(237,230,214);
 $cjmt-ghost-white-rgb:      rgb(251,251,253);
 
-
 $cjmt-maroon-rgb:           rgb(128,0,0);
 $cjmt-deep-sky-blue-rgb:    rgb(13,202,240);
 $cjmt-coral-rgb:            rgb(255,127,80);
+
+$cjmt-primary-color-rgb:          rgb(0,204,204);
+$cjmt-secondary-color-rgb:        rgb(255,228,30);
+$cjmt-accent-color-rgb:           rgb(168,169,173);
+$cjmt-valid-color-rgb:            rgb(11,218,81);
+$cjmt-warning-color-rgb:          rgb(255,153,102);
+$cjmt-alert-color-rgb:            rgb(186,10,15);
+$cjmt-color-info-rgb:             rgb(65,105,225);
+$cjmt-invalid-color:              rgb(186,10,15);
+$cjmt-text-color-rgb:             rgb(192,192,192);
+$cjmt-body-bg-color-rgb:          rgb(40,40,40);
+$cjmt-text-muted-color-rgb:       rgb(78,78,78);
+
+/* Utilities Text Variables */
+$text-muted-rgb:        rgb(98,98,98);
+$text-rgb:              rgb(0,1,0);
+$body-rgb:              rgb(228,237,244);
+$caption-rgb:           rgb(62,62,62);
+$caption-border-rgb:    rgb(26,26,26);
+$light-rgb:             rgb(192,192,192);
+$dark-rgb:              rgb(26,26,26);
+$input-rgb:             rgb(78,78,78);
+$input-bg-rgb:          rgb(192,192,192);
+$input-border-rgb:      rgb(26,26,26);
+$input-focus-rgb:       rgb(40,40,40);
+$input-focus-bg-rgb:     rgb(228,237,244);
+$input-focus-border-rgb: rgb(26,26,26);

@@ -1,341 +1,517 @@
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-
-$min-contrast-ratio: 2.5;
-// Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark: black;
-$color-contrast-light: white;
-
 // fusv-disable
-$blue-100: tint-color($blue, 80%);
-$blue-200: tint-color($blue, 60%);
-$blue-300: tint-color($blue, 40%);
-$blue-400: tint-color($blue, 20%);
-$blue-500: $blue;
-$blue-600: shade-color($blue, 20%);
-$blue-700: shade-color($blue, 40%);
-$blue-800: shade-color($blue, 60%);
-$blue-900: shade-color($blue, 80%);
+$cjmt-blue-100: tint-color($cjmt-blue, 80%);
+$cjmt-blue-200: tint-color($cjmt-blue, 60%);
+$cjmt-blue-300: tint-color($cjmt-blue, 40%);
+$cjmt-blue-400: tint-color($cjmt-blue, 20%);
+$cjmt-blue-500: $cjmt-blue;
+$cjmt-blue-600: shade-color($cjmt-blue, 20%);
+$cjmt-blue-700: shade-color($cjmt-blue, 40%);
+$cjmt-blue-800: shade-color($cjmt-blue, 60%);
+$cjmt-blue-900: shade-color($cjmt-blue, 80%);
 
-$indigo-100: tint-color($indigo, 80%);
-$indigo-200: tint-color($indigo, 60%);
-$indigo-300: tint-color($indigo, 40%);
-$indigo-400: tint-color($indigo, 20%);
-$indigo-500: $indigo;
-$indigo-600: shade-color($indigo, 20%);
-$indigo-700: shade-color($indigo, 40%);
-$indigo-800: shade-color($indigo, 60%);
-$indigo-900: shade-color($indigo, 80%);
+$cjmt-indigo-100: tint-color($cjmt-indigo, 80%);
+$cjmt-indigo-200: tint-color($cjmt-indigo, 60%);
+$cjmt-indigo-300: tint-color($cjmt-indigo, 40%);
+$cjmt-indigo-400: tint-color($cjmt-indigo, 20%);
+$cjmt-indigo-500: $cjmt-indigo;
+$cjmt-indigo-600: shade-color($cjmt-indigo, 20%);
+$cjmt-indigo-700: shade-color($cjmt-indigo, 40%);
+$cjmt-indigo-800: shade-color($cjmt-indigo, 60%);
+$cjmt-indigo-900: shade-color($cjmt-indigo, 80%);
 
-$purple-100: tint-color($purple, 80%);
-$purple-200: tint-color($purple, 60%);
-$purple-300: tint-color($purple, 40%);
-$purple-400: tint-color($purple, 20%);
-$purple-500: $purple;
-$purple-600: shade-color($purple, 20%);
-$purple-700: shade-color($purple, 40%);
-$purple-800: shade-color($purple, 60%);
-$purple-900: shade-color($purple, 80%);
+$cjmt-purple-100: tint-color($cjmt-purple, 80%);
+$cjmt-purple-200: tint-color($cjmt-purple, 60%);
+$cjmt-purple-300: tint-color($cjmt-purple, 40%);
+$cjmt-purple-400: tint-color($cjmt-purple, 20%);
+$cjmt-purple-500: $cjmt-purple;
+$cjmt-purple-600: shade-color($cjmt-purple, 20%);
+$cjmt-purple-700: shade-color($cjmt-purple, 40%);
+$cjmt-purple-800: shade-color($cjmt-purple, 60%);
+$cjmt-purple-900: shade-color($cjmt-purple, 80%);
 
-$pink-100: tint-color($pink, 80%);
-$pink-200: tint-color($pink, 60%);
-$pink-300: tint-color($pink, 40%);
-$pink-400: tint-color($pink, 20%);
-$pink-500: $pink;
-$pink-600: shade-color($pink, 20%);
-$pink-700: shade-color($pink, 40%);
-$pink-800: shade-color($pink, 60%);
-$pink-900: shade-color($pink, 80%);
+$cjmt-pink-100: tint-color($cjmt-pink, 80%);
+$cjmt-pink-200: tint-color($cjmt-pink, 60%);
+$cjmt-pink-300: tint-color($cjmt-pink, 40%);
+$cjmt-pink-400: tint-color($cjmt-pink, 20%);
+$cjmt-pink-500: $cjmt-pink;
+$cjmt-pink-600: shade-color($cjmt-pink, 20%);
+$cjmt-pink-700: shade-color($cjmt-pink, 40%);
+$cjmt-pink-800: shade-color($cjmt-pink, 60%);
+$cjmt-pink-900: shade-color($cjmt-pink, 80%);
 
-$red-100: tint-color($red, 80%);
-$red-200: tint-color($red, 60%);
-$red-300: tint-color($red, 40%);
-$red-400: tint-color($red, 20%);
-$red-500: $red;
-$red-600: shade-color($red, 20%);
-$red-700: shade-color($red, 40%);
-$red-800: shade-color($red, 60%);
-$red-900: shade-color($red, 80%);
+$cjmt-red-100: tint-color($cjmt-red, 80%);
+$cjmt-red-200: tint-color($cjmt-red, 60%);
+$cjmt-red-300: tint-color($cjmt-red, 40%);
+$cjmt-red-400: tint-color($cjmt-red, 20%);
+$cjmt-red-500: $cjmt-red;
+$cjmt-red-600: shade-color($cjmt-red, 20%);
+$cjmt-red-700: shade-color($cjmt-red, 40%);
+$cjmt-red-800: shade-color($cjmt-red, 60%);
+$cjmt-red-900: shade-color($cjmt-red, 80%);
 
-$orange-100: tint-color($orange, 80%);
-$orange-200: tint-color($orange, 60%);
-$orange-300: tint-color($orange, 40%);
-$orange-400: tint-color($orange, 20%);
-$orange-500: $orange;
-$orange-600: shade-color($orange, 20%);
-$orange-700: shade-color($orange, 40%);
-$orange-800: shade-color($orange, 60%);
-$orange-900: shade-color($orange, 80%);
+$cjmt-orange-100: tint-color($cjmt-orange, 80%);
+$cjmt-orange-200: tint-color($cjmt-orange, 60%);
+$cjmt-orange-300: tint-color($cjmt-orange, 40%);
+$cjmt-orange-400: tint-color($cjmt-orange, 20%);
+$cjmt-orange-500: $cjmt-orange;
+$cjmt-orange-600: shade-color($cjmt-orange, 20%);
+$cjmt-orange-700: shade-color($cjmt-orange, 40%);
+$cjmt-orange-800: shade-color($cjmt-orange, 60%);
+$cjmt-orange-900: shade-color($cjmt-orange, 80%);
 
-$yellow-100: tint-color($yellow, 80%);
-$yellow-200: tint-color($yellow, 60%);
-$yellow-300: tint-color($yellow, 40%);
-$yellow-400: tint-color($yellow, 20%);
-$yellow-500: $yellow;
-$yellow-600: shade-color($yellow, 20%);
-$yellow-700: shade-color($yellow, 40%);
-$yellow-800: shade-color($yellow, 60%);
-$yellow-900: shade-color($yellow, 80%);
+$cjmt-yellow-100: tint-color($cjmt-yellow, 80%);
+$cjmt-yellow-200: tint-color($cjmt-yellow, 60%);
+$cjmt-yellow-300: tint-color($cjmt-yellow, 40%);
+$cjmt-yellow-400: tint-color($cjmt-yellow, 20%);
+$cjmt-yellow-500: $cjmt-yellow;
+$cjmt-yellow-600: shade-color($cjmt-yellow, 20%);
+$cjmt-yellow-700: shade-color($cjmt-yellow, 40%);
+$cjmt-yellow-800: shade-color($cjmt-yellow, 60%);
+$cjmt-yellow-900: shade-color($cjmt-yellow, 80%);
 
-$green-100: tint-color($green, 80%);
-$green-200: tint-color($green, 60%);
-$green-300: tint-color($green, 40%);
-$green-400: tint-color($green, 20%);
-$green-500: $green;
-$green-600: shade-color($green, 20%);
-$green-700: shade-color($green, 40%);
-$green-800: shade-color($green, 60%);
-$green-900: shade-color($green, 80%);
+$cjmt-green-100: tint-color($cjmt-green, 80%);
+$cjmt-green-200: tint-color($cjmt-green, 60%);
+$cjmt-green-300: tint-color($cjmt-green, 40%);
+$cjmt-green-400: tint-color($cjmt-green, 20%);
+$cjmt-green-500: $cjmt-green;
+$cjmt-green-600: shade-color($cjmt-green, 20%);
+$cjmt-green-700: shade-color($cjmt-green, 40%);
+$cjmt-green-800: shade-color($cjmt-green, 60%);
+$cjmt-green-900: shade-color($cjmt-green, 80%);
 
-$teal-100: tint-color($teal, 80%);
-$teal-200: tint-color($teal, 60%);
-$teal-300: tint-color($teal, 40%);
-$teal-400: tint-color($teal, 20%);
-$teal-500: $teal;
-$teal-600: shade-color($teal, 20%);
-$teal-700: shade-color($teal, 40%);
-$teal-800: shade-color($teal, 60%);
-$teal-900: shade-color($teal, 80%);
+$cjmt-teal-100: tint-color($cjmt-teal, 80%);
+$cjmt-teal-200: tint-color($cjmt-teal, 60%);
+$cjmt-teal-300: tint-color($cjmt-teal, 40%);
+$cjmt-teal-400: tint-color($cjmt-teal, 20%);
+$cjmt-teal-500: $cjmt-teal;
+$cjmt-teal-600: shade-color($cjmt-teal, 20%);
+$cjmt-teal-700: shade-color($cjmt-teal, 40%);
+$cjmt-teal-800: shade-color($cjmt-teal, 60%);
+$cjmt-teal-900: shade-color($cjmt-teal, 80%);
 
-$cyan-100: tint-color($cyan, 80%);
-$cyan-200: tint-color($cyan, 60%);
-$cyan-300: tint-color($cyan, 40%);
-$cyan-400: tint-color($cyan, 20%);
-$cyan-500: $cyan;
-$cyan-600: shade-color($cyan, 20%);
-$cyan-700: shade-color($cyan, 40%);
-$cyan-800: shade-color($cyan, 60%);
-$cyan-900: shade-color($cyan, 80%);
+$cjmt-cyan-100: tint-color($cjmt-cyan, 80%);
+$cjmt-cyan-200: tint-color($cjmt-cyan, 60%);
+$cjmt-cyan-300: tint-color($cjmt-cyan, 40%);
+$cjmt-cyan-400: tint-color($cjmt-cyan, 20%);
+$cjmt-cyan-500: $cjmt-cyan;
+$cjmt-cyan-600: shade-color($cjmt-cyan, 20%);
+$cjmt-cyan-700: shade-color($cjmt-cyan, 40%);
+$cjmt-cyan-800: shade-color($cjmt-cyan, 60%);
+$cjmt-cyan-900: shade-color($cjmt-cyan, 80%);
 
-$silver-100: tint-color($silver, 80%);
-$silver-200: tint-color($silver, 60%);
-$silver-300: tint-color($silver, 40%);
-$silver-400: tint-color($silver, 20%);
-$silver-500: $silver;
-$silver-600: shade-color($silver, 20%);
-$silver-700: shade-color($silver, 40%);
-$silver-800: shade-color($silver, 60%);
-$silver-900: shade-color($silver, 80%);
-
-$chocolate-100: tint-color($chocolate, 80%);
-$chocolate-200: tint-color($chocolate, 60%);
-$chocolate-300: tint-color($chocolate, 40%);
-$chocolate-400: tint-color($chocolate, 20%);
-$chocolate-500: $chocolate;
-$chocolate-600: shade-color($chocolate, 20%);
-$chocolate-700: shade-color($chocolate, 40%);
-$chocolate-800: shade-color($chocolate, 60%);
-$chocolate-900: shade-color($chocolate, 80%);
-
-$cjmt-secondary-color-100: tint-color($cjmt-secondary-color, 80%);
-$cjmt-secondary-color-200: tint-color($cjmt-secondary-color, 60%);
-$cjmt-secondary-color-300: tint-color($cjmt-secondary-color, 40%);
-$cjmt-secondary-color-400: tint-color($cjmt-secondary-color, 20%);
-$cjmt-secondary-color-500: $cjmt-secondary-color;
-$cjmt-secondary-color-600: shade-color($cjmt-secondary-color, 20%);
-$cjmt-secondary-color-700: shade-color($cjmt-secondary-color, 40%);
-$cjmt-secondary-color-800: shade-color($cjmt-secondary-color, 60%);
-$cjmt-secondary-color-900: shade-color($cjmt-secondary-color, 80%);
-
-$cjmt-accent-color-100: tint-color($cjmt-accent-color, 80%);
-$cjmt-accent-color-200: tint-color($cjmt-accent-color, 60%);
-$cjmt-accent-color-300: tint-color($cjmt-accent-color, 40%);
-$cjmt-accent-color-400: tint-color($cjmt-accent-color, 20%);
-$cjmt-accent-color-500: $cjmt-accent-color;
-$cjmt-accent-color-600: shade-color($cjmt-accent-color, 20%);
-$cjmt-accent-color-700: shade-color($cjmt-accent-color, 40%);
-$cjmt-accent-color-800: shade-color($cjmt-accent-color, 60%);
-$cjmt-accent-color-900: shade-color($cjmt-accent-color, 80%);
-
-
-$cjmt-primary-color-100: tint-color($cjmt-primary-color, 80%);
-$cjmt-primary-color-200: tint-color($cjmt-primary-color, 60%);
-$cjmt-primary-color-300: tint-color($cjmt-primary-color, 40%);
-$cjmt-primary-color-400: tint-color($cjmt-primary-color, 20%);
-$cjmt-primary-color-500: $cjmt-primary-color;
-$cjmt-primary-color-600: shade-color($cjmt-primary-color, 20%);
-$cjmt-primary-color-700: shade-color($cjmt-primary-color, 40%);
-$cjmt-primary-color-800: shade-color($cjmt-primary-color, 60%);
-$cjmt-primary-color-900: shade-color($cjmt-primary-color, 80%);
-
-$blues: (
-  'blue-100': $blue-100,
-  'blue-200': $blue-200,
-  'blue-300': $blue-300,
-  'blue-400': $blue-400,
-  'blue-500': $blue-500,
-  'blue-600': $blue-600,
-  'blue-700': $blue-700,
-  'blue-800': $blue-800,
-  'blue-900': $blue-900
+$cjmt-blues: (
+  "$cjmt-blue-100": $cjmt-blue-100,
+  "$cjmt-blue-200": $cjmt-blue-200,
+  "$cjmt-blue-300": $cjmt-blue-300,
+  "$cjmt-blue-400": $cjmt-blue-400,
+  "$cjmt-blue-500": $cjmt-blue-500,
+  "$cjmt-blue-600": $cjmt-blue-600,
+  "$cjmt-blue-700": $cjmt-blue-700,
+  "$cjmt-blue-800": $cjmt-blue-800,
+  "$cjmt-blue-900": $cjmt-blue-900
 );
 
-$indigos: (
-  'indigo-100': $indigo-100,
-  'indigo-200': $indigo-200,
-  'indigo-300': $indigo-300,
-  'indigo-400': $indigo-400,
-  'indigo-500': $indigo-500,
-  'indigo-600': $indigo-600,
-  'indigo-700': $indigo-700,
-  'indigo-800': $indigo-800,
-  'indigo-900': $indigo-900
+$cjmt-indigos: (
+  "$cjmt-indigo-100": $cjmt-indigo-100,
+  "$cjmt-indigo-200": $cjmt-indigo-200,
+  "$cjmt-indigo-300": $cjmt-indigo-300,
+  "$cjmt-indigo-400": $cjmt-indigo-400,
+  "$cjmt-indigo-500": $cjmt-indigo-500,
+  "$cjmt-indigo-600": $cjmt-indigo-600,
+  "$cjmt-indigo-700": $cjmt-indigo-700,
+  "$cjmt-indigo-800": $cjmt-indigo-800,
+  "$cjmt-indigo-900": $cjmt-indigo-900
 );
 
-$purples: (
-  'purple-100': $purple-200,
-  'purple-200': $purple-100,
-  'purple-300': $purple-300,
-  'purple-400': $purple-400,
-  'purple-500': $purple-500,
-  'purple-600': $purple-600,
-  'purple-700': $purple-700,
-  'purple-800': $purple-800,
-  'purple-900': $purple-900
+$cjmt-purples: (
+  "$cjmt-purple-100": $cjmt-purple-200,
+  "$cjmt-purple-200": $cjmt-purple-100,
+  "$cjmt-purple-300": $cjmt-purple-300,
+  "$cjmt-purple-400": $cjmt-purple-400,
+  "$cjmt-purple-500": $cjmt-purple-500,
+  "$cjmt-purple-600": $cjmt-purple-600,
+  "$cjmt-purple-700": $cjmt-purple-700,
+  "$cjmt-purple-800": $cjmt-purple-800,
+  "$cjmt-purple-900": $cjmt-purple-900
 );
 
-$pinks: (
-  'pink-100': $pink-100,
-  'pink-200': $pink-200,
-  'pink-300': $pink-300,
-  'pink-400': $pink-400,
-  'pink-500': $pink-500,
-  'pink-600': $pink-600,
-  'pink-700': $pink-700,
-  'pink-800': $pink-800,
-  'pink-900': $pink-900
+$cjmt-pinks: (
+  "$cjmt-pink-100": $cjmt-pink-100,
+  "$cjmt-pink-200": $cjmt-pink-200,
+  "$cjmt-pink-300": $cjmt-pink-300,
+  "$cjmt-pink-400": $cjmt-pink-400,
+  "$cjmt-pink-500": $cjmt-pink-500,
+  "$cjmt-pink-600": $cjmt-pink-600,
+  "$cjmt-pink-700": $cjmt-pink-700,
+  "$cjmt-pink-800": $cjmt-pink-800,
+  "$cjmt-pink-900": $cjmt-pink-900
 );
 
-$reds: (
-  'red-100': $red-100,
-  'red-200': $red-200,
-  'red-300': $red-300,
-  'red-400': $red-400,
-  'red-500': $red-500,
-  'red-600': $red-600,
-  'red-700': $red-700,
-  'red-800': $red-800,
-  'red-900': $red-900
+$cjmt-reds: (
+  "$cjmt-red-100": $cjmt-red-100,
+  "$cjmt-red-200": $cjmt-red-200,
+  "$cjmt-red-300": $cjmt-red-300,
+  "$cjmt-red-400": $cjmt-red-400,
+  "$cjmt-red-500": $cjmt-red-500,
+  "$cjmt-red-600": $cjmt-red-600,
+  "$cjmt-red-700": $cjmt-red-700,
+  "$cjmt-red-800": $cjmt-red-800,
+  "$cjmt-red-900": $cjmt-red-900
 );
 
-$oranges: (
-  'orange-100': $orange-100,
-  'orange-200': $orange-200,
-  'orange-300': $orange-300,
-  'orange-400': $orange-400,
-  'orange-500': $orange-500,
-  'orange-600': $orange-600,
-  'orange-700': $orange-700,
-  'orange-800': $orange-800,
-  'orange-900': $orange-900
+$cjmt-oranges: (
+  "$cjmt-orange-100": $cjmt-orange-100,
+  "$cjmt-orange-200": $cjmt-orange-200,
+  "$cjmt-orange-300": $cjmt-orange-300,
+  "$cjmt-orange-400": $cjmt-orange-400,
+  "$cjmt-orange-500": $cjmt-orange-500,
+  "$cjmt-orange-600": $cjmt-orange-600,
+  "$cjmt-orange-700": $cjmt-orange-700,
+  "$cjmt-orange-800": $cjmt-orange-800,
+  "$cjmt-orange-900": $cjmt-orange-900
 );
 
-$yellows: (
-  'yellow-100': $yellow-100,
-  'yellow-200': $yellow-200,
-  'yellow-300': $yellow-300,
-  'yellow-400': $yellow-400,
-  'yellow-500': $yellow-500,
-  'yellow-600': $yellow-600,
-  'yellow-700': $yellow-700,
-  'yellow-800': $yellow-800,
-  'yellow-900': $yellow-900
+$cjmt-yellows: (
+  "$cjmt-yellow-100": $cjmt-yellow-100,
+  "$cjmt-yellow-200": $cjmt-yellow-200,
+  "$cjmt-yellow-300": $cjmt-yellow-300,
+  "$cjmt-yellow-400": $cjmt-yellow-400,
+  "$cjmt-yellow-500": $cjmt-yellow-500,
+  "$cjmt-yellow-600": $cjmt-yellow-600,
+  "$cjmt-yellow-700": $cjmt-yellow-700,
+  "$cjmt-yellow-800": $cjmt-yellow-800,
+  "$cjmt-yellow-900": $cjmt-yellow-900
 );
 
-$greens: (
-  'green-100': $green-100,
-  'green-200': $green-200,
-  'green-300': $green-300,
-  'green-400': $green-400,
-  'green-500': $green-500,
-  'green-600': $green-600,
-  'green-700': $green-700,
-  'green-800': $green-800,
-  'green-900': $green-900
+$cjmt-greens: (
+  "$cjmt-green-100": $cjmt-green-100,
+  "$cjmt-green-200": $cjmt-green-200,
+  "$cjmt-green-300": $cjmt-green-300,
+  "$cjmt-green-400": $cjmt-green-400,
+  "$cjmt-green-500": $cjmt-green-500,
+  "$cjmt-green-600": $cjmt-green-600,
+  "$cjmt-green-700": $cjmt-green-700,
+  "$cjmt-green-800": $cjmt-green-800,
+  "$cjmt-green-900": $cjmt-green-900
 );
 
-$teals: (
-  'teal-100': $teal-100,
-  'teal-200': $teal-200,
-  'teal-300': $teal-300,
-  'teal-400': $teal-400,
-  'teal-500': $teal-500,
-  'teal-600': $teal-600,
-  'teal-700': $teal-700,
-  'teal-800': $teal-800,
-  'teal-900': $teal-900
+$cjmt-teals: (
+  "$cjmt-teal-100": $cjmt-teal-100,
+  "$cjmt-teal-200": $cjmt-teal-200,
+  "$cjmt-teal-300": $cjmt-teal-300,
+  "$cjmt-teal-400": $cjmt-teal-400,
+  "$cjmt-teal-500": $cjmt-teal-500,
+  "$cjmt-teal-600": $cjmt-teal-600,
+  "$cjmt-teal-700": $cjmt-teal-700,
+  "$cjmt-teal-800": $cjmt-teal-800,
+  "$cjmt-teal-900": $cjmt-teal-900
 );
 
-$cyans: (
-  'cyan-100': $cyan-100,
-  'cyan-200': $cyan-200,
-  'cyan-300': $cyan-300,
-  'cyan-400': $cyan-400,
-  'cyan-500': $cyan-500,
-  'cyan-600': $cyan-600,
-  'cyan-700': $cyan-700,
-  'cyan-800': $cyan-800,
-  'cyan-900': $cyan-900
+$cjmt-cyans: (
+  "$cjmt-cyan-100": $cjmt-cyan-100,
+  "$cjmt-cyan-200": $cjmt-cyan-200,
+  "$cjmt-cyan-300": $cjmt-cyan-300,
+  "$cjmt-cyan-400": $cjmt-cyan-400,
+  "$cjmt-cyan-500": $cjmt-cyan-500,
+  "$cjmt-cyan-600": $cjmt-cyan-600,
+  "$cjmt-cyan-700": $cjmt-cyan-700,
+  "$cjmt-cyan-800": $cjmt-cyan-800,
+  "cyan-900": $cjmt-cyan-900
+);
+// fusv-enable
+$cjmt-deep-sky-blue-100: tint-color($cjmt-deep-sky-blue, 80%);
+$cjmt-deep-sky-blue-200: tint-color($cjmt-deep-sky-blue, 60%);
+$cjmt-deep-sky-blue-300: tint-color($cjmt-deep-sky-blue, 40%);
+$cjmt-deep-sky-blue-400: tint-color($cjmt-deep-sky-blue, 20%);
+$cjmt-deep-sky-blue-500: $cjmt-deep-sky-blue;
+$cjmt-deep-sky-blue-600: shade-color($cjmt-deep-sky-blue, 20%);
+$cjmt-deep-sky-blue-700: shade-color($cjmt-deep-sky-blue, 40%);
+$cjmt-deep-sky-blue-800: shade-color($cjmt-deep-sky-blue, 60%);
+$cjmt-deep-sky-blue-900: shade-color($cjmt-deep-sky-blue, 80%);
+
+$cjmt-silver-100: tint-color($cjmt-silver, 80%);
+$cjmt-silver-200: tint-color($cjmt-silver, 60%);
+$cjmt-silver-300: tint-color($cjmt-silver, 40%);
+$cjmt-silver-400: tint-color($cjmt-silver, 20%);
+$cjmt-silver-500: $cjmt-silver;
+$cjmt-silver-600: shade-color($cjmt-silver, 20%);
+$cjmt-silver-700: shade-color($cjmt-silver, 40%);
+$cjmt-silver-800: shade-color($cjmt-silver, 60%);
+$cjmt-silver-900: shade-color($cjmt-silver, 80%);
+
+$cjmt-chocolate-100: tint-color($cjmt-chocolate, 80%);
+$cjmt-chocolate-200: tint-color($cjmt-chocolate, 60%);
+$cjmt-chocolate-300: tint-color($cjmt-chocolate, 40%);
+$cjmt-chocolate-400: tint-color($cjmt-chocolate, 20%);
+$cjmt-chocolate-500: $cjmt-chocolate;
+$cjmt-chocolate-600: shade-color($cjmt-chocolate, 20%);
+$cjmt-chocolate-700: shade-color($cjmt-chocolate, 40%);
+$cjmt-chocolate-800: shade-color($cjmt-chocolate, 60%);
+$cjmt-chocolate-900: shade-color($cjmt-chocolate, 80%);
+
+$cjmt-camel-100: tint-color($cjmt-camel, 80%);
+$cjmt-camel-200: tint-color($cjmt-camel, 60%);
+$cjmt-camel-300: tint-color($cjmt-camel, 40%);
+$cjmt-camel-400: tint-color($cjmt-camel, 20%);
+$cjmt-camel-500: $cjmt-camel;
+$cjmt-camel-600: shade-color($cjmt-camel, 20%);
+$cjmt-camel-700: shade-color($cjmt-camel, 40%);
+$cjmt-camel-800: shade-color($cjmt-camel, 60%);
+$cjmt-camel-900: shade-color($cjmt-camel, 80%);
+
+$cjmt-saltpan-100: tint-color($cjmt-saltpan, 80%);
+$cjmt-saltpan-200: tint-color($cjmt-saltpan, 60%);
+$cjmt-saltpan-300: tint-color($cjmt-saltpan, 40%);
+$cjmt-saltpan-400: tint-color($cjmt-saltpan, 20%);
+$cjmt-saltpan-500: $cjmt-saltpan;
+$cjmt-saltpan-600: shade-color($cjmt-saltpan, 20%);
+$cjmt-saltpan-700: shade-color($cjmt-saltpan, 40%);
+$cjmt-saltpan-800: shade-color($cjmt-saltpan, 60%);
+$cjmt-saltpan-900: shade-color($cjmt-saltpan, 80%);
+
+$cjmt-white-chocolate-100: tint-color($cjmt-white-chocolate, 80%);
+$cjmt-white-chocolate-200: tint-color($cjmt-white-chocolate, 60%);
+$cjmt-white-chocolate-300: tint-color($cjmt-white-chocolate, 40%);
+$cjmt-white-chocolate-400: tint-color($cjmt-white-chocolate, 20%);
+$cjmt-white-chocolate-500: $cjmt-white-chocolate;
+$cjmt-white-chocolate-600: shade-color($cjmt-white-chocolate, 20%);
+$cjmt-white-chocolate-700: shade-color($cjmt-white-chocolate, 40%);
+$cjmt-white-chocolate-800: shade-color($cjmt-white-chocolate, 60%);
+$cjmt-white-chocolate-900: shade-color($cjmt-white-chocolate, 80%);
+
+$cjmt-dark-vanilla-100: tint-color($cjmt-dark-vanilla, 80%);
+$cjmt-dark-vanilla-200: tint-color($cjmt-dark-vanilla, 60%);
+$cjmt-dark-vanilla-300: tint-color($cjmt-dark-vanilla, 40%);
+$cjmt-dark-vanilla-400: tint-color($cjmt-dark-vanilla, 20%);
+$cjmt-dark-vanilla-500: $cjmt-dark-vanilla;
+$cjmt-dark-vanilla-600: shade-color($cjmt-dark-vanilla, 20%);
+$cjmt-dark-vanilla-700: shade-color($cjmt-dark-vanilla, 40%);
+$cjmt-dark-vanilla-800: shade-color($cjmt-dark-vanilla, 60%);
+$cjmt-dark-vanilla-900: shade-color($cjmt-dark-vanilla, 80%);
+
+$cjmt-ghost-white-100: tint-color($cjmt-ghost-white, 80%);
+$cjmt-ghost-white-200: tint-color($cjmt-ghost-white, 60%);
+$cjmt-ghost-white-300: tint-color($cjmt-ghost-white, 40%);
+$cjmt-ghost-white-400: tint-color($cjmt-ghost-white, 20%);
+$cjmt-ghost-white-500: $cjmt-ghost-white;
+$cjmt-ghost-white-600: shade-color($cjmt-ghost-white, 20%);
+$cjmt-ghost-white-700: shade-color($cjmt-ghost-white, 40%);
+$cjmt-ghost-white-800: shade-color($cjmt-ghost-white, 60%);
+$cjmt-ghost-white-900: shade-color($cjmt-ghost-white, 80%);
+
+$cjmt-coral-100: tint-color($cjmt-coral, 80%);
+$cjmt-coral-200: tint-color($cjmt-coral, 60%);
+$cjmt-coral-300: tint-color($cjmt-coral, 40%);
+$cjmt-coral-400: tint-color($cjmt-coral, 20%);
+$cjmt-coral-500: $cjmt-coral;
+$cjmt-coral-600: shade-color($cjmt-coral, 20%);
+$cjmt-coral-700: shade-color($cjmt-coral, 40%);
+$cjmt-coral-800: shade-color($cjmt-coral, 60%);
+$cjmt-coral-900: shade-color($cjmt-coral, 80%);
+
+$cjmt-maroon-100: tint-color($cjmt-maroon, 80%);
+$cjmt-maroon-200: tint-color($cjmt-maroon, 60%);
+$cjmt-maroon-300: tint-color($cjmt-maroon, 40%);
+$cjmt-maroon-400: tint-color($cjmt-maroon, 20%);
+$cjmt-maroon-500: $cjmt-maroon;
+$cjmt-maroon-600: shade-color($cjmt-maroon, 20%);
+$cjmt-maroon-700: shade-color($cjmt-maroon, 40%);
+$cjmt-maroon-800: shade-color($cjmt-maroon, 60%);
+$cjmt-maroon-900: shade-color($cjmt-maroon, 80%);
+
+$cjmt-deep-sky-blues: (
+  deep-sky-blue-100: $cjmt-deep-sky-blue-100,
+  deep-sky-blue-200: $cjmt-deep-sky-blue-200,
+  deep-sky-blue-300: $cjmt-deep-sky-blue-300,
+  deep-sky-blue-400: $cjmt-deep-sky-blue-400,
+  deep-sky-blue-500: $cjmt-deep-sky-blue-500,
+  deep-sky-blue-600: $cjmt-deep-sky-blue-600,
+  deep-sky-blue-700: $cjmt-deep-sky-blue-700,
+  deep-sky-blue-800: $cjmt-deep-sky-blue-800,
+  deep-sky-blue-900: $cjmt-deep-sky-blue-900
+)
+!default;
+
+$cjmt-silvers: (
+  silver-100: $cjmt-silver-100,
+  silver-200: $cjmt-silver-200,
+  silver-300: $cjmt-silver-300,
+  silver-400: $cjmt-silver-400,
+  silver-500: $cjmt-silver-500,
+  silver-600: $cjmt-silver-600,
+  silver-700: $cjmt-silver-700,
+  silver-800: $cjmt-silver-800,
+  silver-900: $cjmt-silver-900
+)
+!default;
+
+$cjmt-chocolates: (
+  chocolate-100: $cjmt-chocolate-200,
+  chocolate-200: $cjmt-chocolate-100,
+  chocolate-300: $cjmt-chocolate-300,
+  chocolate-400: $cjmt-chocolate-400,
+  chocolate-500: $cjmt-chocolate-500,
+  chocolate-600: $cjmt-chocolate-600,
+  chocolate-700: $cjmt-chocolate-700,
+  chocolate-800: $cjmt-chocolate-800,
+  chocolate-900: $cjmt-chocolate-900
+)
+!default;
+
+$cjmt-camels: (
+  camel-100: $cjmt-camel-100,
+  camel-200: $cjmt-camel-200,
+  camel-300: $cjmt-camel-300,
+  camel-400: $cjmt-camel-400,
+  camel-500: $cjmt-camel-500,
+  camel-600: $cjmt-camel-600,
+  camel-700: $cjmt-camel-700,
+  camel-800: $cjmt-camel-800,
+  camel-900: $cjmt-camel-900
+)
+!default;
+
+$cjmt-saltpans: (
+  saltpan-100: $cjmt-saltpan-100,
+  saltpan-200: $cjmt-saltpan-200,
+  saltpan-300: $cjmt-saltpan-300,
+  saltpan-400: $cjmt-saltpan-400,
+  saltpan-500: $cjmt-saltpan-500,
+  saltpan-600: $cjmt-saltpan-600,
+  saltpan-700: $cjmt-saltpan-700,
+  saltpan-800: $cjmt-saltpan-800,
+  saltpan-900: $cjmt-saltpan-900
+)
+!default;
+
+$cjmt-white-chocolates: (
+  white-chocolate-100: $cjmt-white-chocolate-100,
+  white-chocolate-200: $cjmt-white-chocolate-200,
+  white-chocolate-300: $cjmt-white-chocolate-300,
+  white-chocolate-400: $cjmt-white-chocolate-400,
+  white-chocolate-500: $cjmt-white-chocolate-500,
+  white-chocolate-600: $cjmt-white-chocolate-600,
+  white-chocolate-700: $cjmt-white-chocolate-700,
+  white-chocolate-800: $cjmt-white-chocolate-800,
+  white-chocolate-900: $cjmt-white-chocolate-900
+)
+!default;
+
+$cjmt-dark-vanillas: (
+  dark-vanilla-100: $cjmt-dark-vanilla-100,
+  dark-vanilla-200: $cjmt-dark-vanilla-200,
+  dark-vanilla-300: $cjmt-dark-vanilla-300,
+  dark-vanilla-400: $cjmt-dark-vanilla-400,
+  dark-vanilla-500: $cjmt-dark-vanilla-500,
+  dark-vanilla-600: $cjmt-dark-vanilla-600,
+  dark-vanilla-700: $cjmt-dark-vanilla-700,
+  dark-vanilla-800: $cjmt-dark-vanilla-800,
+  dark-vanilla-900: $cjmt-dark-vanilla-900
+)
+!default;
+
+$cjmt-ghost-whites: (
+  ghost-white-100: $cjmt-ghost-white-100,
+  ghost-white-200: $cjmt-ghost-white-200,
+  ghost-white-300: $cjmt-ghost-white-300,
+  ghost-white-400: $cjmt-ghost-white-400,
+  ghost-white-500: $cjmt-ghost-white-500,
+  ghost-white-600: $cjmt-ghost-white-600,
+  ghost-white-700: $cjmt-ghost-white-700,
+  ghost-white-800: $cjmt-ghost-white-800,
+  ghost-white-900: $cjmt-ghost-white-900
+)
+!default;
+
+$cjmt-corals: (
+  coral-100: $cjmt-coral-100,
+  coral-200: $cjmt-coral-200,
+  coral-300: $cjmt-coral-300,
+  coral-400: $cjmt-coral-400,
+  coral-500: $cjmt-coral-500,
+  coral-600: $cjmt-coral-600,
+  coral-700: $cjmt-coral-700,
+  coral-800: $cjmt-coral-800,
+  coral-900: $cjmt-coral-900
+)
+!default;
+
+$cjmt-maroons: (
+  maroon-100: $cjmt-maroon-100,
+  maroon-200: $cjmt-maroon-200,
+  maroon-300: $cjmt-maroon-300,
+  maroon-400: $cjmt-maroon-400,
+  maroon-500: $cjmt-maroon-500,
+  maroon-600: $cjmt-maroon-600,
+  maroon-700: $cjmt-maroon-700,
+  maroon-800: $cjmt-maroon-800,
+  maroon-900: $cjmt-maroon-900
 );
 
-$chocolates: (
-  chocolate-100: $chocolate-100,
-  chocolate-200: $chocolate-200,
-  chocolate-300: $chocolate-300,
-  chocolate-400: $chocolate-400,
-  chocolate-500: $chocolate-500,
-  chocolate-600: $chocolate-600,
-  chocolate-700: $chocolate-700,
-  chocolate-800: $chocolate-800,
-  chocolate-900: $chocolate-900
+$cjmt-primary-100: tint-color($cjmt-primary, 80%);
+$cjmt-primary-200: tint-color($cjmt-primary, 60%);
+$cjmt-primary-300: tint-color($cjmt-primary, 40%);
+$cjmt-primary-400: tint-color($cjmt-primary, 20%);
+$cjmt-primary-500: $cjmt-primary;
+$cjmt-primary-600: shade-color($cjmt-primary, 20%);
+$cjmt-primary-700: shade-color($cjmt-primary, 40%);
+$cjmt-primary-800: shade-color($cjmt-primary, 60%);
+$cjmt-primary-900: shade-color($cjmt-primary, 80%);
+
+$cjmt-secondary-100: tint-color($cjmt-secondary, 80%);
+$cjmt-secondary-200: tint-color($cjmt-secondary, 60%);
+$cjmt-secondary-300: tint-color($cjmt-secondary, 40%);
+$cjmt-secondary-400: tint-color($cjmt-secondary, 20%);
+$cjmt-secondary-500: $cjmt-secondary;
+$cjmt-secondary-600: shade-color($cjmt-secondary, 20%);
+$cjmt-secondary-700: shade-color($cjmt-secondary, 40%);
+$cjmt-secondary-800: shade-color($cjmt-secondary, 60%);
+$cjmt-secondary-900: shade-color($cjmt-secondary, 80%);
+
+$cjmt-accent-100: tint-color($cjmt-accent, 80%);
+$cjmt-accent-200: tint-color($cjmt-accent, 60%);
+$cjmt-accent-300: tint-color($cjmt-accent, 40%);
+$cjmt-accent-400: tint-color($cjmt-accent, 20%);
+$cjmt-accent-500: $cjmt-accent;
+$cjmt-accent-600: shade-color($cjmt-accent, 20%);
+$cjmt-accent-700: shade-color($cjmt-accent, 40%);
+$cjmt-accent-800: shade-color($cjmt-accent, 60%);
+$cjmt-accent-900: shade-color($cjmt-accent, 80%);
+
+
+$cjmt-primarys: (
+  cjmt-primary-100: $cjmt-primary-100,
+  cjmt-primary-200: $cjmt-primary-200,
+  cjmt-primary-300: $cjmt-primary-300,
+  cjmt-primary-400: $cjmt-primary-400,
+  cjmt-primary-500: $cjmt-primary-500,
+  cjmt-primary-600: $cjmt-primary-600,
+  cjmt-primary-700: $cjmt-primary-700,
+  cjmt-primary-800: $cjmt-primary-800,
+  cjmt-primary-900: $cjmt-primary-900
 );
 
-$silvers: (
-  silver-100: $silver-100,
-  silver-200: $silver-200,
-  silver-300: $silver-300,
-  silver-400: $silver-400,
-  silver-500: $silver-500,
-  silver-600: $silver-600,
-  silver-700: $silver-700,
-  silver-800: $silver-800,
-  silver-900: $silver-900
+$cjmt-secondarys: (
+  cjmt-secondary-100: $cjmt-secondary-100,
+  cjmt-secondary-200: $cjmt-secondary-200,
+  cjmt-secondary-300: $cjmt-secondary-300,
+  cjmt-secondary-400: $cjmt-secondary-400,
+  cjmt-secondary-500: $cjmt-secondary-500,
+  cjmt-secondary-600: $cjmt-secondary-600,
+  cjmt-secondary-700: $cjmt-secondary-700,
+  cjmt-secondary-800: $cjmt-secondary-800,
+  cjmt-secondary-900: $cjmt-secondary-900
 );
 
-$cjmt-accent-colors: (
-  'cjmt-accent-color-100': $cjmt-accent-color-100,
-  'cjmt-accent-color-200': $cjmt-accent-color-200,
-  'cjmt-accent-color-300': $cjmt-accent-color-300,
-  'cjmt-accent-color-400': $cjmt-accent-color-400,
-  'cjmt-accent-color-500': $cjmt-accent-color-500,
-  'cjmt-accent-color-600': $cjmt-accent-color-600,
-  'cjmt-accent-color-700': $cjmt-accent-color-700,
-  'cjmt-accent-color-800': $cjmt-accent-color-800,
-  'cjmt-accent-color-900': $cjmt-accent-color-900
-);
-
-
-$cjmt-secondary-colors: (
-  'cjmt-secondary-color-100': $cjmt-secondary-color-100,
-  'cjmt-secondary-color-200': $cjmt-secondary-color-200,
-  'cjmt-secondary-color-300': $cjmt-secondary-color-300,
-  'cjmt-secondary-color-400': $cjmt-secondary-color-400,
-  'cjmt-secondary-color-500': $cjmt-secondary-color-500,
-  'cjmt-secondary-color-600': $cjmt-secondary-color-600,
-  'cjmt-secondary-color-700': $cjmt-secondary-color-700,
-  'cjmt-secondary-color-800': $cjmt-secondary-color-800,
-  'cjmt-secondary-color-900': $cjmt-secondary-color-900
-);
-
-$cjmt-primary-colors: (
-  'cjmt-primary-color-100': $cjmt-primary-color-100,
-  'cjmt-primary-color-200': $cjmt-primary-color-200,
-  'cjmt-primary-color-300': $cjmt-primary-color-300,
-  'cjmt-primary-color-400': $cjmt-primary-color-400,
-  'cjmt-primary-color-500': $cjmt-primary-color-500,
-  'cjmt-primary-color-600': $cjmt-primary-color-600,
-  'cjmt-primary-color-700': $cjmt-primary-color-700,
-  'cjmt-primary-color-800': $cjmt-primary-color-800,
-  'cjmt-primary-color-900': $cjmt-primary-900
+$cjmt-accents: (
+  cjmt-accent-100: $cjmt-accent-100,
+  cjmt-accent-200: $cjmt-accent-200,
+  cjmt-accent-300: $cjmt-accent-300,
+  cjmt-accent-400: $cjmt-accent-400,
+  cjmt-accent-500: $cjmt-accent-500,
+  cjmt-accent-600: $cjmt-accent-600,
+  cjmt-accent-700: $cjmt-accent-700,
+  cjmt-accent-800: $cjmt-accent-800,
+  cjmt-accent-900: $cjmt-accent-900
 );
 // fusv-enable
